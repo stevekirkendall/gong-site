@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+	padding: 0;
+    margin: 0;
+}
+    
 /*------------------ Desktop Landscape ------------------*/
 
 @media only screen 
@@ -59,7 +65,7 @@
         margin-bottom: 10px;
         letter-spacing: -.08em;
     }
-    p, ul {
+    .menu {
         font-size: .5em;
         line-height: 1.5em;
     }
@@ -72,5 +78,41 @@
         color: #b1b1b1;
         text-decoration: none;
     }
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+      .dropdown-container {
+          max-width: 800px;
+          min-width: 300px;
+          overflow: hidden;
+      }
+      .dropdown-container header {
+          cursor: pointer;
+      }
+      .dropdown-container .expand {
+          float: right;
+          transform: rotate(45deg);
+          font-size: 1.8em;
+          transition: transform 350ms ease-in-out;
+      }
+      .dropdown-container.open .expand{
+          transform: rotate(0);
+      }
+      .dropdown-container article {
+          max-height: 0px;
+          overflow: hidden;
+          line-height: 1.6; 
+          transition: max-height 350ms ease-in-out;
+      }
+      
+      /* padding can't be on article element because it won't collapse properly, add wrapper around contents */
+      .dropdown-container .article-inner {
+          padding: 1rem;
+      }
 
 }
