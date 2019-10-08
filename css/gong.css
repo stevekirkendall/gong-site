@@ -1,11 +1,186 @@
+/* ----------- reset ----------- */
 * {
     box-sizing: border-box;
 	padding: 0;
     margin: 0;
 }
-    
-/*------------------ Desktop Landscape ------------------*/
 
+/* ----------- iphone5 320x568 portrait ----------- */
+
+body {
+    background: #fff;
+    color: #b1b1b1;
+    font-family: century-gothic, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 62.5%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6.5% 20% 1fr;
+    grid-template-areas: 
+    "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
+    "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
+    "image image image image image image image image"
+    ; 
+    grid-gap: 8px;
+    height: 95vh;
+    align-items: start;
+    margin: 6%; 
+} 
+
+.gongLogo {
+    grid-area: gong-logo;
+    align-self: start;
+    justify-self: left;
+}
+.gongLogo img {
+    width: 30px;
+}
+.gongName {
+    grid-area: gong-name;
+    align-self: start;
+    justify-self: left;
+}
+.gongMenu {
+    grid-area: gong-menu;
+    align-self: start;
+    justify-self: left;
+}
+.picture {
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+}
+.picture img {
+    width: 100%;
+    height: auto;
+}
+h1 {
+    font-weight: 200;
+    font-size: 4em;
+    line-height: .8em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0px;
+    letter-spacing: -.08em;
+    }
+ul {
+    list-style: none;
+    padding: 0;
+    margin: -4px 0 0 0;
+    line-height: 1.5em;
+    font-size: 1.15em;
+}
+a, a:hover, a:visited {
+    color: #b1b1b1;
+    text-decoration: none;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .dropdown-container {
+      max-width: 100px;
+      min-width: 50px;
+      overflow: hidden;
+  }
+  .dropdown-container header {
+      cursor: pointer;
+  }
+  .expand {
+      font-size: .9em;
+      display: inline-block;
+      margin-left: .2em;
+      transform: rotate(0);
+      transition: transform 350ms ease-in-out;
+  }
+  .open .expand{
+      transform: rotate(45deg);
+  }
+  .dropdown-container article {
+      max-height: 0px;
+      overflow: hidden;
+      line-height: 1.6; 
+      transition: max-height 350ms ease-in-out;
+  }
+  .dropdown-container .article-inner ul {
+    margin: .1em 0 .2em .6em;
+}
+.dropdown-container .article-inner ul li {
+    font-size: .88em;
+    line-height: 1.5em;
+}
+/* padding can't be on article element because it won't collapse properly, add wrapper around contents
+.dropdown-container .article-inner {
+    padding: 1rem;
+} */
+
+
+/* ----------- iphone5 568x320 landscape ----------- */
+
+@media only screen and (min-width: 500px) {
+   
+        .container {
+            display: grid;
+            grid-template-columns: minmax(39.5ch, 15ch) 1fr;
+            /* grid-template-rows: 30px 12em 1fr; */
+            grid-template-rows: 10% 40% 1fr;
+            grid-template-areas: 
+            "gong-logo image" 
+            "gong-name image" 
+            "gong-menu image" 
+            ;
+            grid-gap: 8px;
+            height: 90vh;
+            margin: 3%; 
+
+        }
+        .picture img {
+            width: auto;
+            height: 90vh;
+        }
+        h1 {
+            font-size: 4em;
+            line-height: .8em;
+        }
+    }
+
+/* ----------- iphone6/7/8 375x667 Portrait ----------- */
+
+@media only screen and (max-width: ) {
+
+    .container {
+        display: grid;
+        grid-template-columns: minmax(47ch, 15ch) 70px;
+        grid-template-rows: 30px 12em 1fr;
+        grid-template-areas: 
+        "gong-logo gong-menu" 
+        "gong-name gong-menu" 
+        "image image" 
+        ;
+        grid-gap: 8px;
+        height: 90vh;
+        margin: 15px;
+    }
+    .picture img {
+        width: auto;
+        height: 80vh;
+    }
+    h1 {
+        font-size: 4em;
+        line-height: .8em;
+    }
+}
+
+
+
+/* ----------- iPad Pro 12.9 Landscape ----------- */
 @media only screen 
     and (min-width: 1024px) 
     and (max-height: 1366px) 
@@ -29,7 +204,7 @@
         grid-template-areas: 
         "gong-logo image" 
         "gong-name image" 
-        "gong-details image" 
+        "gong-menu image" 
         ;
         grid-gap: 20px;
         height: 90vh;
@@ -46,6 +221,11 @@
         grid-area: gong-name;
         align-self: start;
         justify-self: left;
+    }
+    .gongMenu {
+        grid-area: gong-menu;
+        font-size: .5em;
+        line-height: 1.5em;
     }
     .picture {
         grid-area: image;
@@ -64,10 +244,6 @@
         margin-top: -6px;
         margin-bottom: 10px;
         letter-spacing: -.08em;
-    }
-    .menu {
-        font-size: .5em;
-        line-height: 1.5em;
     }
     ul {
         list-style: none;
@@ -115,9 +291,4 @@
         margin: .3em 0 .5em .6em;
     }
       
-      /* padding can't be on article element because it won't collapse properly, add wrapper around contents
-      .dropdown-container .article-inner {
-          padding: 1rem;
-      } */
-
 }
