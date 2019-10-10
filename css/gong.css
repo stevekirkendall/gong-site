@@ -22,7 +22,7 @@ body {
     grid-template-areas: 
     "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
     "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
-    "image image image image image image image image"
+    "content content content content content content content content"
     ; 
     grid-gap: 8px;
     height: 95vh;
@@ -47,14 +47,18 @@ body {
     align-self: start;
     justify-self: left;
 }
-.picture {
-    grid-area: image;
-    align-self: center;
-    justify-self: center;
-}
 .picture img {
     width: 100%;
     height: auto;
+}
+.profile img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.6em;
+}
+.profile p {
+    width: 100%;
+    font-size: 120%; 
 }
 h1 {
     font-weight: 200;
@@ -127,9 +131,9 @@ a, a:hover, a:visited {
             /* grid-template-rows: 30px 12em 1fr; */
             grid-template-rows: 10% 38% 1fr;
             grid-template-areas: 
-            "gong-logo image" 
-            "gong-name image" 
-            "gong-menu image" 
+            "gong-logo content" 
+            "gong-name content" 
+            "gong-menu content" 
             ;
             grid-gap: 8px;
             height: 90vh;
@@ -139,6 +143,15 @@ a, a:hover, a:visited {
         .picture img {
             width: auto;
             height: 90vh;
+        }
+        .profile img {
+            width: 50%;
+            height: auto;
+            margin-bottom: 1.6em;
+        }
+        .profile p {
+            width: 85%;
+            margin-bottom: 1.6em;
         }
         h1 {
             font-size: 4em;
@@ -161,7 +174,7 @@ a, a:hover, a:visited {
         grid-template-areas: 
         "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
         "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
-        "image image image image image image image image"
+        "content content content content content content content content"
         ; 
         grid-gap: 8px;
         height: 96vh;
@@ -201,9 +214,9 @@ a, a:hover, a:visited {
         /* grid-template-rows: 30px 12em 1fr; */
         grid-template-rows: 10% 33% 1fr;
         grid-template-areas: 
-        "gong-logo image" 
-        "gong-name image" 
-        "gong-menu image" 
+        "gong-logo content" 
+        "gong-name content" 
+        "gong-menu content" 
         ;
         grid-gap: 8px;
         height: 90vh;
@@ -241,9 +254,9 @@ a, a:hover, a:visited {
         grid-template-columns: minmax(5ch, 18ch) 1fr;
         grid-template-rows: 10% 30% 1fr;
         grid-template-areas: 
-        "gong-logo image" 
-        "gong-name image" 
-        "gong-menu image" 
+        "gong-logo content" 
+        "gong-name content" 
+        "gong-menu content" 
         ;
         grid-gap: 20px;
         height: 90vh;
@@ -293,7 +306,7 @@ a, a:hover, a:visited {
         grid-template-areas: 
         "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
         "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
-        "image image image image image image image image"
+        "content content content content content content content content"       
         ; 
         grid-gap: 8px;
         height: 96vh;
