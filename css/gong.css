@@ -3,7 +3,9 @@
     box-sizing: border-box;
 	padding: 0;
     margin: 0;
+    font-size: 1rem;
 }
+
 
 /* ----------- iphone5 320x568 portrait ----------- */
 
@@ -13,21 +15,21 @@ body {
     font-family: century-gothic, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 62.5%; 
+    padding: 5%;
 }
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 5.75% 20% 1fr;
+    grid-template-rows: 40px 20% 1fr;
     grid-template-areas: 
-    "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
-    "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
+    "gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu gong-menu" 
+    "gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu gong-menu" 
     "content content content content content content content content"
     ; 
-    grid-gap: 8px;
+    grid-row-gap: 0.7rem;
+    grid-column-gap: 0.9rem;
     height: 95vh;
     align-items: start;
-    margin: 6%; 
 } 
 .gongLogo {
     grid-area: gong-logo;
@@ -35,17 +37,23 @@ body {
     justify-self: left;
 }
 .gongLogo img {
-    width: 20%;
+    width: 25%;
 }
 .gongName {
     grid-area: gong-name;
     align-self: start;
     justify-self: left;
+    border: 
 }
 .gongMenu {
     grid-area: gong-menu;
     align-self: start;
     justify-self: left;
+}
+.picture {
+    grid-area: content;
+    align-self: center;
+    justify-self: center;
 }
 .picture img {
     width: 100%;
@@ -54,32 +62,37 @@ body {
 .profile img {
     width: 100%;
     height: auto;
-    margin-bottom: 1.6em;
+    align-items: end;
 }
-.profile p {
+/* .profile p {
     width: 100%;
     font-size: 120%; 
-}
+} */
 h1 {
     font-weight: 200;
-    font-size: 4em;
-    line-height: .8em;
+    font-size: 2.5rem;
+    line-height: 2rem;
     text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0px;
     letter-spacing: -.08em;
     }
 ul {
     list-style: none;
     padding: 0;
-    margin: -4px 0 0 0;
-    line-height: 1.5em;
-    font-size: 1.15em;
+    margin: -4px 0 0 .8rem;
+    font-size: 0.25rem;
+}
+ul li {
+    line-height: 1.5rem;
+
 }
 a, a:hover, a:visited {
     color: #b1b1b1;
     text-decoration: none;
 }
+.clearfix {
+    line-height: 1.5rem;
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -99,7 +112,7 @@ a, a:hover, a:visited {
   .expand {
       font-size: .9em;
       display: inline-block;
-      margin-left: .2em;
+      margin-left: .2rem;
       transform: rotate(0);
       transition: transform 350ms ease-in-out;
   }
@@ -109,36 +122,44 @@ a, a:hover, a:visited {
   .dropdown-container article {
       max-height: 0px;
       overflow: hidden;
-      line-height: 1.6; 
       transition: max-height 350ms ease-in-out;
   }
   .dropdown-container .article-inner ul {
-    margin: .1em 0 .2em .6em;
+    margin: .3rem 0 .4rem .6rem;
 }
 .dropdown-container .article-inner ul li {
-    font-size: .88em;
-    line-height: 1.5em;
+    font-size: .88rem;
+    line-height: 1.5rem;
 }
+
 
 
 /* ----------- iphone5 568x320 landscape ----------- */
 
 @media only screen and (min-width: 500px) {
+
+        body{
+            padding: 3%;
+        }
    
         .container {
             display: grid;
-            grid-template-columns: minmax(39.5ch, 15ch) 1fr;
+            grid-template-columns: 1fr 4fr;
             /* grid-template-rows: 30px 12em 1fr; */
-            grid-template-rows: 10% 38% 1fr;
+            grid-template-rows: 40px 38% 1fr;
             grid-template-areas: 
             "gong-logo content" 
             "gong-name content" 
             "gong-menu content" 
             ;
-            grid-gap: 8px;
+            grid-gap: 0.6rem;
             height: 90vh;
-            margin: 3%; 
 
+        }
+        .picture {
+            grid-area: content;
+            align-self: start;
+            justify-self: center;
         }
         .picture img {
             width: auto;
@@ -154,8 +175,17 @@ a, a:hover, a:visited {
             margin-bottom: 1.6em;
         }
         h1 {
-            font-size: 4em;
+            font-size: 2.5em;
             line-height: .8em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: -4px 0 0 .0;
+            font-size: 0.25rem;
+        }
+        .dropdown-container .article-inner ul {
+            margin: .3rem 0 .4rem .6rem;
         }
     }
 
@@ -182,7 +212,7 @@ a, a:hover, a:visited {
         margin: 3%; 
     } 
     .gongLogo img {
-        width: 30%;
+        width: 3em;
     }
     .picture {
         grid-area: image;
@@ -224,7 +254,7 @@ a, a:hover, a:visited {
 
     }
     .gongLogo img {
-        width: 20%;
+        width: 3em%;
     }
     .picture img {
         width: auto;
@@ -247,12 +277,13 @@ a, a:hover, a:visited {
     body {
         margin: 30px;
         padding: 0;
-        font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+        /* font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400)); */
+        font-size: 62.5%;
     }
     .container {
         display: grid;
         grid-template-columns: minmax(5ch, 18ch) 1fr;
-        grid-template-rows: 10% 30% 1fr;
+        grid-template-rows: 8% 40% 1fr;
         grid-template-areas: 
         "gong-logo content" 
         "gong-name content" 
@@ -263,7 +294,7 @@ a, a:hover, a:visited {
         margin: 0px;
     }
     .gongLogo img {
-        width: 39%;
+        width: 1.5em;
     }
     .gongMenu {
         grid-area: gong-menu;
@@ -283,6 +314,15 @@ a, a:hover, a:visited {
         margin-bottom: 10px;
         letter-spacing: -.08em;
     }
+    .profile {
+        grid-area: content;
+        align-self: start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
+        font-size: .6em;
+        line-height: 1.5em;
+        width: 80%;
 }
 
 /* ----------- iPad Pro 10.5 Landscape 1112x834px ----------- */
@@ -314,7 +354,7 @@ a, a:hover, a:visited {
         margin: 3%; 
     } 
     .gongLogo img {
-        width: 30%;
+        width: 3em;
     }
     .picture {
         grid-area: image;
