@@ -192,36 +192,41 @@ a, a:hover, a:visited {
 
 /* ----------- iPad 768x1024 Portrait ----------- */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)
+    and (orientation: portrait) {
 
     /* body {
         font-size: 110%; 
     } */
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 5.5% 19% 1fr;
         grid-template-areas: 
-        "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
-        "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
-        "content content content content content content content content"
+        "gong-logo gong-logo gong-logo gong-logo gong-menu" 
+        "gong-name gong-name gong-name gong-name gong-menu" 
+        "content content content content content"
         ; 
-        grid-gap: 8px;
-        height: 96vh;
+        grid-column-gap: 3rem;
+        grid-row-gap: 2rem;
+        height: 95vh;
         align-items: start;
-        margin: 3%; 
     } 
     .gongLogo img {
         width: 3em;
     }
     .picture {
-        grid-area: image;
-        align-self: center;
+        grid-area: content;
+        align-self: start;
         justify-self: center;
     }
     .picture img {
         width: auto;
         height: 65vh;
+    }
+    h1 {
+        font-size: 4.5em;
+        line-height: 3.8rem;
     }
     .dropdown-container {
         max-width: 200px;
@@ -233,36 +238,36 @@ a, a:hover, a:visited {
 
 /* ----------- iPhone X++ Landscape ----------- */
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) 
+    and (orientation: landscape) {
 
     body {
-        font-size: 62.5%; 
+        padding: 2%;
     }
     .container {
         display: grid;
-        grid-template-columns: minmax(39.5ch, 15ch) 1fr;
+        grid-template-columns: 1fr 4fr;
         /* grid-template-rows: 30px 12em 1fr; */
-        grid-template-rows: 10% 33% 1fr;
+        grid-template-rows: 2.7rem 9rem 1fr;
         grid-template-areas: 
         "gong-logo content" 
         "gong-name content" 
         "gong-menu content" 
         ;
         grid-gap: 8px;
-        height: 90vh;
-        margin: 3%; 
-
+        height: 91.5vh;
+        margin: 0;
     }
     .gongLogo img {
-        width: 3em%;
+        width: 2.5rem;
     }
     .picture img {
         width: auto;
         height: 90vh;
     }
     h1 {
-        font-size: 4em;
-        line-height: .8em;
+        font-size: 2.75rem;
+        line-height: 2.25rem;
     }
 }
 
@@ -277,8 +282,6 @@ a, a:hover, a:visited {
     body {
         margin: 30px;
         padding: 0;
-        /* font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400)); */
-        font-size: 62.5%;
     }
     .container {
         display: grid;
@@ -290,7 +293,7 @@ a, a:hover, a:visited {
         "gong-menu content" 
         ;
         grid-gap: 20px;
-        height: 90vh;
+        height: 95vh;
         margin: 0px;
     }
     .gongLogo img {
@@ -307,8 +310,8 @@ a, a:hover, a:visited {
     }
     h1 {
         font-weight: 200;
-        font-size: 2.5em;
-        line-height: .8em;
+        font-size: 4.5rem;
+        line-height: 3.8rem;
         text-transform: uppercase;
         margin-top: -6px;
         margin-bottom: 10px;
