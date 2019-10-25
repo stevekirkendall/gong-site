@@ -15,20 +15,20 @@ body {
     font-family: century-gothic, sans-serif;
     font-style: normal;
     font-weight: 400;
-    padding: 5%;
+    padding: 1.2rem;
 }
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 8rem 4rem 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 8.3rem 2.3rem 1fr;
     grid-template-areas: 
-    "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
-    "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
-    "content content content content content content content content"
+    "gong-name gong-name gong-name gong-menu " 
+    "gong-logo gong-logo gong-logo gong-menu" 
+    "content content content content"
     ; 
     grid-row-gap: 0.7rem;
     grid-column-gap: 0.9rem;
-    height: 95vh;
+    height: 94vh;
     align-items: start;
 } 
 .gongLogo {
@@ -37,7 +37,7 @@ body {
     justify-self: left;
 }
 .gongLogo img {
-    width: 20%;
+    width: 25%;
 }
 .gongName {
     grid-area: gong-name;
@@ -48,7 +48,7 @@ body {
 .gongMenu {
     grid-area: gong-menu;
     align-self: start;
-    justify-self: left;
+    justify-self: right;
 }
 .picture {
     grid-area: content;
@@ -70,28 +70,26 @@ body {
 } */
 h1 {
     font-weight: 200;
-    font-size: 2.5rem;
-    line-height: 2rem;
+    font-size: 3rem;
+    line-height: 2.5rem;
     text-transform: uppercase;
     letter-spacing: -.08em;
-    }
+}
 ul {
     list-style: none;
     padding: 0;
-    margin: -4px 0 0 -.5rem;
-    font-size: 0.25rem;
+    margin: -4px 0 0 0;
 }
-ul li {
-    line-height: 1.5rem;
-
-}
-a, a:hover, a:visited {
+li a, li a:hover, li a:visited,
+.dropdown-container p {
     color: #b1b1b1;
     text-decoration: none;
+    font-size: .8rem;
+    line-height: 1rem;
 }
-.clearfix {
+/* .clearfix {
     line-height: 1.5rem;
-}
+} */
 
 .clearfix:after {
     visibility: hidden;
@@ -106,9 +104,11 @@ a, a:hover, a:visited {
       min-width: 50px;
       overflow: hidden;
   }
-  .dropdown-container header {
-      cursor: pointer;
-  }
+  header.clearfix p {
+    line-height: 1.2rem;
+    cursor: pointer;
+
+}
   .expand {
       font-size: .9em;
       display: inline-block;
@@ -125,41 +125,50 @@ a, a:hover, a:visited {
       transition: max-height 350ms ease-in-out;
   }
   .dropdown-container .article-inner ul {
-    margin: .3rem 0 .4rem .6rem;
+    margin: .2rem 0 .4rem .3rem;
 }
 .dropdown-container .article-inner ul li {
-    font-size: .88rem;
-    line-height: 1.5rem;
+    /* font-size: .88rem; */
+    line-height: 1.25rem;
 }
 
 
 
 /* ----------- iphone5 568x320 landscape ----------- */
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 500px) 
+    and (orientation: landscape) {
 
         body{
-            padding: 3%;
+            padding: 1rem;
         }
    
         .container {
             display: grid;
             grid-template-columns: 1fr 4fr;
             /* grid-template-rows: 30px 12em 1fr; */
-            grid-template-rows: 40px 38% 1fr;
-            grid-template-areas: 
-            "gong-logo content" 
+            grid-template-rows: 7.5rem 2.4rem 1fr;
+            grid-template-areas:
             "gong-name content" 
+            "gong-logo content" 
             "gong-menu content" 
             ;
             grid-gap: 0.6rem;
             height: 90vh;
-
+        }
+        .gongLogo img {
+            width: 20%;
+        }
+        .gongMenu {
+            justify-self: left;
         }
         .picture {
             grid-area: content;
             align-self: start;
-            justify-self: center;
+            justify-self: left;
+            border-left: 1px solid #b1b1b1;
+            margin-left: 1rem;
+            padding-left: 1.6rem;
         }
         .picture img {
             width: auto;
@@ -175,17 +184,23 @@ a, a:hover, a:visited {
             margin-bottom: 1.6em;
         }
         h1 {
-            font-size: 2.5em;
-            line-height: .8em;
+            font-size: 2.8em;
+            line-height: .83em;
+            margin-top: -0.21rem;
         }
         ul {
-            list-style: none;
-            padding: 0;
-            margin: -4px 0 0 .0;
-            font-size: 0.25rem;
+            margin: 0;
         }
+        li a, li a:hover, li a:visited,
+        .dropdown-container p {
+            color: #b1b1b1;
+            text-decoration: none;
+            font-size: .8rem;
+            line-height: 1rem;
+        }
+        
         .dropdown-container .article-inner ul {
-            margin: .3rem 0 .4rem .6rem;
+            margin: .12rem 0 .22rem .6rem;
         }
     }
 
@@ -195,25 +210,25 @@ a, a:hover, a:visited {
 @media only screen and (min-width: 768px)
     and (orientation: portrait) {
 
-    /* body {
-        font-size: 110%; 
-    } */
+    body {
+        padding: 2.5rem 4rem; 
+    } 
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 5.5% 19% 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 12.4rem 3rem 1fr;
         grid-template-areas: 
-        "gong-logo gong-logo gong-logo gong-logo gong-menu" 
-        "gong-name gong-name gong-name gong-name gong-menu" 
-        "content content content content content"
+        "gong-name gong-name gong-name gong-menu " 
+        "gong-logo gong-logo gong-logo gong-menu" 
+        "content content content content"
         ; 
         grid-column-gap: 3rem;
-        grid-row-gap: 2rem;
-        height: 95vh;
+        grid-row-gap: 1rem;
+        height: 93vh;
         align-items: start;
     } 
     .gongLogo img {
-        width: 3em;
+        width: 2.5rem;
     }
     .picture {
         grid-area: content;
@@ -228,10 +243,23 @@ a, a:hover, a:visited {
         font-size: 4.5em;
         line-height: 3.8rem;
     }
+    
+    li a, li a:hover, li a:visited,
+    .dropdown-container p {
+    color: #b1b1b1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    }
     .dropdown-container {
         max-width: 200px;
         min-width: 75px;
         overflow: hidden;
+    }
+    header.clearfix p {
+        line-height: 2rem;
+        cursor: pointer;
+    
     }
 }
 
@@ -280,20 +308,19 @@ a, a:hover, a:visited {
     and (orientation: landscape)  {
 
     body {
-        margin: 30px;
-        padding: 0;
+        padding: 2rem;
     }
     .container {
         display: grid;
-        grid-template-columns: minmax(5ch, 18ch) 1fr;
-        grid-template-rows: 40% 8% 1fr;
+        grid-template-columns: 1 fr 4fr;
+        grid-template-rows: 12.8rem 4rem 1fr;
         grid-template-areas: 
         "gong-name content" 
         "gong-logo content" 
         "gong-menu content" 
         ;
         grid-gap: 20px;
-        height: 95vh;
+        height: 92vh;
         margin: 0px;
     }
     .gongLogo img {
@@ -303,6 +330,9 @@ a, a:hover, a:visited {
         grid-area: gong-menu;
         font-size: .5em;
         line-height: 1.5em;
+    }
+    .gongLogo img {
+        width: 3rem;
     }
     .picture img {
         width: auto;
@@ -317,7 +347,27 @@ a, a:hover, a:visited {
         margin-bottom: 10px;
         letter-spacing: -.08em;
     }
-    .profile {
+    li a, li a:hover, li a:visited,
+    .dropdown-container p {
+    color: #b1b1b1;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    }
+    .dropdown-container {
+        max-width: 200px;
+        min-width: 75px;
+        overflow: hidden;
+    }
+    .dropdown-container .article-inner ul {
+        margin-bottom: .5rem;
+    }
+    header.clearfix p {
+        line-height: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /* .profile {
         grid-area: content;
         align-self: start;
         display: grid;
@@ -326,6 +376,7 @@ a, a:hover, a:visited {
         font-size: .6em;
         line-height: 1.5em;
         width: 80%;
+    } */
 }
 
 /* ----------- iPad Pro 10.5 Landscape 1112x834px ----------- */
