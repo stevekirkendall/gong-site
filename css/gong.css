@@ -20,10 +20,10 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 40px 20% 1fr;
+    grid-template-rows: 8rem 4rem 1fr;
     grid-template-areas: 
-    "gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu gong-menu" 
-    "gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu gong-menu" 
+    "gong-name gong-name gong-name gong-name gong-name gong-name gong-menu gong-menu" 
+    "gong-logo gong-logo gong-logo gong-logo gong-logo gong-logo gong-menu gong-menu" 
     "content content content content content content content content"
     ; 
     grid-row-gap: 0.7rem;
@@ -37,7 +37,7 @@ body {
     justify-self: left;
 }
 .gongLogo img {
-    width: 25%;
+    width: 20%;
 }
 .gongName {
     grid-area: gong-name;
@@ -52,7 +52,7 @@ body {
 }
 .picture {
     grid-area: content;
-    align-self: center;
+    align-self: start;
     justify-self: center;
 }
 .picture img {
@@ -78,7 +78,7 @@ h1 {
 ul {
     list-style: none;
     padding: 0;
-    margin: -4px 0 0 .8rem;
+    margin: -4px 0 0 -.5rem;
     font-size: 0.25rem;
 }
 ul li {
@@ -286,10 +286,10 @@ a, a:hover, a:visited {
     .container {
         display: grid;
         grid-template-columns: minmax(5ch, 18ch) 1fr;
-        grid-template-rows: 8% 40% 1fr;
+        grid-template-rows: 40% 8% 1fr;
         grid-template-areas: 
-        "gong-logo content" 
         "gong-name content" 
+        "gong-logo content" 
         "gong-menu content" 
         ;
         grid-gap: 20px;
