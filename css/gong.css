@@ -15,12 +15,12 @@ body {
     font-family: century-gothic, sans-serif;
     font-style: normal;
     font-weight: 400;
-    padding: 1.2rem;
+    padding: 1rem;
 }
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 8.3rem 2.3rem 1fr;
+    grid-template-rows: 8.3rem 2.5rem 1fr;
     grid-template-areas: 
     "gong-name gong-name gong-name gong-menu " 
     "gong-logo gong-logo gong-logo gong-menu" 
@@ -37,7 +37,7 @@ body {
     justify-self: left;
 }
 .gongLogo img {
-    width: 25%;
+    width: 20%;
 }
 .gongName {
     grid-area: gong-name;
@@ -53,7 +53,7 @@ body {
 .picture {
     grid-area: content;
     align-self: start;
-    justify-self: center;
+    justify-self: right;
 }
 .picture img {
     width: 100%;
@@ -73,11 +73,12 @@ h1 {
     font-size: 3rem;
     line-height: 2.5rem;
     text-transform: uppercase;
-    letter-spacing: -.08em;
+    letter-spacing: -.29rem;
 }
 ul {
     list-style: none;
     padding: 0;
+    width: 4rem;
     margin: -4px 0 0 0;
 }
 li a, li a:hover, li a:visited,
@@ -110,9 +111,9 @@ li a, li a:hover, li a:visited,
 
 }
   .expand {
-      font-size: .9em;
+      font-size: .7rem;
       display: inline-block;
-      margin-left: .2rem;
+      margin-left: 3px;
       transform: rotate(0);
       transition: transform 350ms ease-in-out;
   }
@@ -140,14 +141,14 @@ li a, li a:hover, li a:visited,
     and (orientation: landscape) {
 
         body{
-            padding: 1rem;
+            padding: 3%;
         }
    
         .container {
             display: grid;
             grid-template-columns: 1fr 4fr;
             /* grid-template-rows: 30px 12em 1fr; */
-            grid-template-rows: 7.5rem 2.4rem 1fr;
+            grid-template-rows: 8rem 2.4rem 1fr;
             grid-template-areas:
             "gong-name content" 
             "gong-logo content" 
@@ -169,24 +170,17 @@ li a, li a:hover, li a:visited,
             border-left: 1px solid #b1b1b1;
             margin-left: 1rem;
             padding-left: 1.6rem;
+            height: 90vh;
+
         }
         .picture img {
             width: auto;
-            height: 90vh;
-        }
-        .profile img {
-            width: 50%;
-            height: auto;
-            margin-bottom: 1.6em;
-        }
-        .profile p {
-            width: 85%;
-            margin-bottom: 1.6em;
+            height: 100%;
         }
         h1 {
-            font-size: 2.8em;
-            line-height: .83em;
-            margin-top: -0.21rem;
+            font-size: 3rem;
+            line-height: 2.5rem;
+            margin-top: -2px
         }
         ul {
             margin: 0;
@@ -239,17 +233,24 @@ li a, li a:hover, li a:visited,
         width: auto;
         height: 65vh;
     }
+    .gongMenu {
+        grid-area: gong-menu;
+        align-self: start;
+        justify-self: right;
+    }
     h1 {
-        font-size: 4.5em;
+        font-size: 4.5rem;
         line-height: 3.8rem;
     }
-    
+    ul {
+        width: 6rem;
+    }
     li a, li a:hover, li a:visited,
     .dropdown-container p {
     color: #b1b1b1;
     text-decoration: none;
     font-size: 1.2rem;
-    line-height: 1.8rem;
+    line-height: 2rem;
     }
     .dropdown-container {
         max-width: 200px;
@@ -264,30 +265,48 @@ li a, li a:hover, li a:visited,
 }
 
 
+/* ----------- iPad 768x1024 Landscape----------- */
+
+/* @media only screen and (min-width: 1024px)
+    and (min-height: 768px) 
+    and (orientation: landscape) {
+
+    body {
+        background: blue;
+    }
+
+} */
+
+
 /* ----------- iPhone X++ Landscape ----------- */
 
 @media only screen and (min-width: 800px) 
     and (orientation: landscape) {
 
     body {
-        padding: 2%;
+        padding: 2.5%;
     }
     .container {
         display: grid;
         grid-template-columns: 1fr 4fr;
         /* grid-template-rows: 30px 12em 1fr; */
-        grid-template-rows: 2.7rem 9rem 1fr;
+        grid-template-rows: 9rem 4rem 1fr;
         grid-template-areas: 
         "gong-name content" 
         "gong-logo content" 
         "gong-menu content" 
         ;
         grid-gap: 8px;
-        height: 91.5vh;
+        height: 90vh;
         margin: 0;
     }
     .gongLogo img {
-        width: 2.5rem;
+        width: 2rem;
+    }
+    .picture {
+        border-left: 1px solid #b1b1b1;
+        margin-left: 1.25em;
+        padding-left: 2rem;
     }
     .picture img {
         width: auto;
@@ -308,31 +327,35 @@ li a, li a:hover, li a:visited,
     and (orientation: landscape)  {
 
     body {
-        padding: 2rem;
+        padding: 3%;
     }
     .container {
+        height: 90vh;
         display: grid;
-        grid-template-columns: 1 fr 4fr;
-        grid-template-rows: 12.8rem 4rem 1fr;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 15rem 6rem 1fr;
         grid-template-areas: 
         "gong-name content" 
         "gong-logo content" 
         "gong-menu content" 
         ;
         grid-gap: 20px;
-        height: 92vh;
         margin: 0px;
     }
     .gongLogo img {
-        width: 1.5em;
+        width: 1.5rem;
     }
     .gongMenu {
         grid-area: gong-menu;
-        font-size: .5em;
-        line-height: 1.5em;
+        font-size: .5rem;
+        line-height: 1.5rem;
     }
     .gongLogo img {
         width: 3rem;
+    }
+    .picture {
+        margin-left: 2.5rem;
+        padding-left: 3.5rem;
     }
     .picture img {
         width: auto;
@@ -340,32 +363,42 @@ li a, li a:hover, li a:visited,
     }
     h1 {
         font-weight: 200;
-        font-size: 4.5rem;
-        line-height: 3.8rem;
+        font-size: 5rem;
+        line-height: 4rem;
         text-transform: uppercase;
-        margin-top: -6px;
         margin-bottom: 10px;
-        letter-spacing: -.08em;
+        letter-spacing: -.5rem;
+    }
+    ul {
+        width: 7rem;
     }
     li a, li a:hover, li a:visited,
     .dropdown-container p {
     color: #b1b1b1;
     text-decoration: none;
-    font-size: 1rem;
-    line-height: 1.4rem;
+    font-size: 1.35rem;
+    line-height: 1.9rem;
     }
     .dropdown-container {
         max-width: 200px;
         min-width: 75px;
         overflow: hidden;
     }
+    header.clearfix p {
+        line-height: 2rem;
+        cursor: pointer;
+    }
+    .expand {
+        font-size: 1rem;
+        display: inline-block;
+        margin-left: .2rem;
+        transform: rotate(0);
+        transition: transform 350ms ease-in-out;
+    }
     .dropdown-container .article-inner ul {
         margin-bottom: .5rem;
     }
-    header.clearfix p {
-        line-height: 1.5rem;
-        cursor: pointer;
-    }
+    
     
     /* .profile {
         grid-area: content;
@@ -407,7 +440,7 @@ li a, li a:hover, li a:visited,
         align-items: start;
     } 
     .gongLogo img {
-        width: 3em;
+        width: 3rem;
     }
     .picture {
         grid-area: content;
