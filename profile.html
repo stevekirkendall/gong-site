@@ -11,8 +11,53 @@
         .profile {
             grid-area: content;
             align-self: start;
-            justify-self: center;
+            justify-self: left;
         }
+        /* .profile img {
+            width: 80%;
+            margin-bottom: 1rem;
+        } */
+        .proPic {
+            width: 60vw;
+            height: 35vh;
+            background: url("img/g_profile_pic.jpg");
+            background-repeat: no-repeat;
+            background-position: 35% 0;
+            background-size: cover;
+            margin-bottom: 1rem;
+        }
+        .profile p {
+            font-size: .8rem;
+            line-height: 1.3rem;
+            padding-right: 1.25rem;
+        }
+        @media only screen and (min-width: 500px) 
+        and (orientation: landscape) {
+
+            .profile {
+            grid-area: content;
+            align-self: start;
+            justify-self: left;
+            border-left: 1px solid #b1b1b1;
+            margin-left: 1rem;
+            padding-left: 1.6rem;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: 20vw 1fr;
+        }
+        .proPic {
+            width: 80%;
+            height: 40vh;
+            background: url("img/g_profile_pic.jpg");
+            background-repeat: no-repeat;
+            background-position: 48% 0;
+            background-size: 350%;
+        }
+        .profile p {
+            font-size: .8rem;
+            line-height: 1.3rem;
+        }
+    }
     </style>
     <title>George Ong Photography</title>
 </head>
@@ -62,7 +107,8 @@
         </div>
 
        <div class="profile">
-           <img src="img/g_profile_pic.jpg" alt="George Ong – Photographer">
+           <div class="proPic"></div>
+
            <p>George Ong was born in Hong Kong and educated in England. 
                 After attending art school in Norwich, he worked as full-time assistant 
                 to David Montgomery for five years. In the late 1980s a shoot for 
