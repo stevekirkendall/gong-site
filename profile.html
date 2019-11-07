@@ -7,205 +7,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/ksi6olq.css">
     <link rel="stylesheet" href="css/gong.css">
     <script src="https://kit.fontawesome.com/101f33a422.js" crossorigin="anonymous"></script>
-    <style>
-        .container {
-            height: 100%;
-        }
-        .profile {
-            grid-area: content;
-            align-self: start;
-            justify-self: left;
-        }
-        /* .profile img {
-            width: 80%;
-            margin-bottom: 1rem;
-        } */
-        .proPic {
-            width: 60vw;
-            height: 35vh;
-            background: url("img/g_profile_pic.jpg");
-            background-repeat: no-repeat;
-            background-position: 35% 0;
-            background-size: cover;
-            margin-bottom: 1rem;
-        }
-        .profile p {
-            font-size: .8rem;
-            line-height: 1.3rem;
-            padding-right: 1.25rem;
-        }
-
-        /* ----------- iphone5 568x320 landscape ----------- */
-
-        @media only screen and (min-width: 500px) 
-        and (orientation: landscape) {
-            
-            .profile {
-            grid-area: content;
-            align-self: start;
-            justify-self: left;
-            border-left: 1px solid #b1b1b1;
-            margin-left: 1rem;
-            padding-left: 1.6rem;
-            height: 90vh;
-            display: grid;
-            grid-template-columns: 20vw 1fr;
-        }
-        .proPic {
-            width: 80%;
-            height: 40vh;
-            background: url("img/g_profile_pic.jpg");
-            background-repeat: no-repeat;
-            background-position: 48% 0;
-            background-size: 350%;
-        }
-        .profile p {
-            font-size: .7rem;
-            line-height: 1rem;
-            margin-top: -4px;
-        }
-    }
-
-        /* ----------- iphone6/7/8 landscape ----------- */
-    
-        @media only screen and (min-width: 650px) 
-        and (orientation: landscape) {
-            
-            .profile {
-                display: grid;
-                grid-template-columns: 25vw 1fr;
-            }
-            .proPic {
-                width: 85%;
-                height: 60vh;
-                background: url("img/g_profile_pic.jpg");
-                background-repeat: no-repeat;
-                background-position: 48% 0;
-                background-size: 100%;
-            }
-            .profile p {
-                font-size: .8rem;
-                line-height: 1.2rem;
-                margin-top: -4px;
-            }
-        }
-
-        /* ----------- iPad portrait ----------- */
-        
-        @media only screen and (min-width: 750px) 
-        and (min-height: 1024px)
-        and (orientation: portrait) {
-
-            .container {
-            height: 92vh;
-            display: grid;
-            grid-template-rows: 14rem 6rem 1fr;
-            }
-            .profile {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 2.5rem;
-            }
-            .proPic {
-                width: 100%;
-                height: 100%;
-                background: url("img/g_profile_pic.jpg");
-                background-repeat: no-repeat;
-                background-position: 48% 0;
-                background-size: 100%;
-                margin: 0;
-            }
-            .profile p {
-                margin-top: -5px;
-            }
-        }
-
-        /* ----------- iphoneX landscape ----------- */
-
-        @media only screen and (min-width: 800px) 
-        and (orientation: landscape) {
-            
-            .profile {
-            grid-template-columns: 30vw 1fr;
-            }
-            .proPic {
-                width: 85%;
-                height: 100%;
-                background: url("img/g_profile_pic.jpg");
-                background-repeat: no-repeat;
-                background-position: 48% 0;
-                background-size: 100%;
-            }
-            .profile p {
-                font-size: .8rem;
-                line-height: 1.2rem;
-                margin-top: -4px;
-            }
-        }
-
-    /* ----------- Desktop 1024px ----------- */
-
-        @media only screen 
-        and (min-width: 1024px) 
-        /* and (max-height: 1080px)  */
-        and (orientation: landscape)  {
-            
-            .profile {
-                grid-template-columns: 30vw 1fr;
-                grid-column-gap: 1.8rem;
-            }
-            .proPic {
-                width: 100%;
-                height: auto;
-                background: url("img/g_profile_pic.jpg");
-                background-repeat: no-repeat;
-                background-position: 48% 0;
-                background-size: 100%;
-            }
-            .profile p {
-                margin-top: -5px;
-                padding-right: .2rem;
-            }
-
-        }
-
-    /* ----------- iPad Pro 12.9 Portrait ----------- */
-
-        @media only screen 
-        and (min-width: 1024px) 
-        /* and (max-height: 1366px)  */
-        and (orientation: portrait) 
-        and (-webkit-min-device-pixel-ratio: 2) {
-
-            body {
-            padding: 4rem 6rem; 
-            } 
-            .container {
-            height: 93vh;
-            display: grid;
-            grid-template-rows: 18rem 8rem 1fr;
-            }
-            .profile {
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 2.5rem;
-            }
-            .proPic {
-                width: 100%;
-                height: 100%;
-                background: url("img/g_profile_pic.jpg");
-                background-repeat: no-repeat;
-                background-position: 48% 0;
-                background-size: 100%;
-                margin: 0;
-            }
-            .profile p {
-                margin-top: -5px;
-            }
-        }
-
-    </style>
     <title>George Ong Photography</title>
 </head>
 <body>
@@ -253,23 +54,25 @@
 
         </div>
 
-       <div class="profile">
+       <div class="content">
 
-           <div class="proPic"></div>
+           <div class="contentPic"><img src="img/g_profile_pic.jpg" alt="map"></div>
 
-           <p>George Ong was born in Hong Kong and educated in England. 
-                After attending art school in Norwich, he worked as full-time assistant 
-                to David Montgomery for five years. In the late 1980s a shoot for 
-                Elle gave him the break he needed and he has been working in 
-                editorial photography ever since. Working most days from his 
-                canal-side studio in London, George is a table-top still life 
-                photographer who has contributed to the FT’s How to Spend It 
-                magazine for more than a decade. Other clients include Boots, 
-                Cutler & Gross, Red Magazine, The Daily Mail, Marks & Spencer, 
-                Waitrose, Tiffany & Co and Givenchy. Early in his career George 
-                learnt that a photograph should talk to its viewer, a lesson that 
-                he continues to apply to his work today.
-            </p>
+           <div class="contentCopy">
+                <p>George Ong was born in Hong Kong and educated in England. 
+                    After attending art school in Norwich, he worked as full-time assistant 
+                    to David Montgomery for five years. In the late 1980s a shoot for 
+                    Elle gave him the break he needed and he has been working in 
+                    editorial photography ever since. Working most days from his 
+                    canal-side studio in London, George is a table-top still life 
+                    photographer who has contributed to the FT’s How to Spend It 
+                    magazine for more than a decade. Other clients include Boots, 
+                    Cutler & Gross, Red Magazine, The Daily Mail, Marks & Spencer, 
+                    Waitrose, Tiffany & Co and Givenchy. Early in his career George 
+                    learnt that a photograph should talk to its viewer, a lesson that 
+                    he continues to apply to his work today.</p>
+            </div>
+
         </div>
    
     </div>
