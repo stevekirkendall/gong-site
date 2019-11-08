@@ -39,7 +39,7 @@
                 </li>
 
                 <li><a href="profile.html">profile</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li><a class="here" href="contact.html">contact</a></li>
                 <li><a href="https://www.instagram.com/georgeongphoto/">instagram</a></li>
             </ul>
 
@@ -57,7 +57,7 @@
 
         <div class="content">
            
-                <div class="contentPic"><img src="img/shep_walk_pos.png" alt="map"></div>
+                <div class="contentPic"><div id="map"></div></div>
      
                 <div class="contentCopy">
                         <p>George Ong<br />
@@ -81,6 +81,22 @@
     </div>
     
     <script src="js/gong.js"></script>
+    <script>
+        // Initialize and add map
+        function initMap() {
+          var gongMap = {lat: 51.5335, lng: -0.0948};
+          // The map, centered
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 15, center: gongMap, disableDefaultUI: true
+});
+          // The marker, positioned at GONG studio
+          var marker = new google.maps.Marker({position: gongMap, map: map});
+        }
+            </script>
+            
+            <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJxYPYoRarSlTtcmRc4aLOVx8nWG3pYbc&callback=initMap">
+</script>
 
 </body>
 </html>
