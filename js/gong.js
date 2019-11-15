@@ -1,4 +1,5 @@
 var header = document.querySelector('.dropdown-container header');
+// var para = document.querySelector('.dropdown-container header p');
 
     header.addEventListener('click', openCurrAccordion, false);
 
@@ -9,10 +10,12 @@ var header = document.querySelector('.dropdown-container header');
 
             if (this === header && !parent.classList.contains('open')) {
                 parent.classList.add('open');
+                // para.classList.add('here');
                 article.style.maxHeight = article.scrollHeight + 'px';
             }
             else {
                 parent.classList.remove('open');
+                // para.classList.remove('here');
                 article.style.maxHeight = '0px';
             }
     }
