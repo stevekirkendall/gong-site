@@ -61,8 +61,7 @@ body {
     justify-self: left;
 }
 .picture,
-.content,
-.masonry {
+.content {
     grid-area: content;
     align-self: start;
     justify-self: left;
@@ -90,9 +89,12 @@ body {
     height: 13.5rem;
     width: 100%;
 }
-.masonry-layout {
+.masonry {
     column-count: 1;
     column-gap: .5rem;
+    grid-area: content;
+    align-self: start;
+    justify-self: left;
 }
 .masonry-layout-panel {
     break-inside: avoid;
@@ -255,9 +257,8 @@ li a.here, li a:hover.here, li a:visited.here,
             margin: -4px 0 1rem 0;
         }
         .masonry {
-            -webkit-columns: 2 135px;
-            -moz-columns: 2 135px;
-            columns: 2 135px;
+            width: 97%;
+            columns: 2 3rem;
             column-gap: .5rem;
             grid-area: content;
             align-self: start;
@@ -301,9 +302,7 @@ and (orientation: landscape) {
             height: 61vh;
         }
         .masonry {
-            -webkit-columns: 3 120px;
-            -moz-columns: 3 120px;
-            columns: 3 120px;
+            columns: 3;
             column-gap: .5rem;
             grid-area: content;
             align-self: start;
@@ -406,9 +405,7 @@ and (orientation: landscape) {
         margin: -4px 0 .5rem 0;
     }
     .masonry {
-        -webkit-columns: 3 120px;
-        -moz-columns: 3 120px;
-        columns: 3 120px;
+        columns: 3;
         column-gap: .5rem;
         grid-area: content;
         align-self: start;
@@ -623,9 +620,7 @@ and (orientation: landscape) {
             margin: -4px 0 .5rem 0;
         }
         .masonry {
-            -webkit-columns: 4 120px;
-            -moz-columns: 4 120px;
-            columns: 4 120px;
+            columns: 4 12rem;
             column-gap: .5rem;
             grid-area: content;
             align-self: start;
