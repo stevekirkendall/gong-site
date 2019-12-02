@@ -1,3 +1,10 @@
+window.onresize = function() {
+    document.body.height = window.innerHeight;
+}
+window.onresize(); // called to initially set the height.
+
+
+
 var header = document.querySelector('.dropdown-container header');
 // var para = document.querySelector('.dropdown-container header p');
 
@@ -19,3 +26,5 @@ var header = document.querySelector('.dropdown-container header');
                 article.style.maxHeight = '0px';
             }
     }
+
+    

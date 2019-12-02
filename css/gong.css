@@ -61,7 +61,8 @@ body {
     justify-self: left;
 }
 .picture,
-.content {
+.content,
+.masonry {
     grid-area: content;
     align-self: start;
     justify-self: left;
@@ -89,18 +90,18 @@ body {
     height: 13.5rem;
     width: 100%;
 }
-.main {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-    grid-auto-flow: row dense;
-    grid-area: content;
+.masonry-layout {
+    column-count: 1;
+    column-gap: .5rem;
 }
-.main img {
-    display: block;
+.masonry-layout-panel {
+    break-inside: avoid;
+}
+.masonry-layout-panel img {
     width: 100%;
-    align-self: center;
+    height: auto;
 }
+
 h1 {
     font-weight: 200;
     font-size: 3rem;
@@ -125,10 +126,6 @@ li a.here, li a:hover.here, li a:visited.here,
 .dropdown-container p.here {
     color: #666565;
 }
-/* .clearfix {
-    line-height: 1.5rem;
-} */
-
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -228,12 +225,10 @@ li a.here, li a:hover.here, li a:visited.here,
             background-color: #b1b1b1;
         }
         .picture,
-        .content,
-        .main {
+        .content {
             grid-area: content;
             align-self: start;
             justify-self: left;
-            /* margin-left: .5rem;*/
             padding-left: .7rem; 
             height: 90vh;
         }
@@ -259,11 +254,20 @@ li a.here, li a:hover.here, li a:visited.here,
             line-height: 1rem;
             margin: -4px 0 1rem 0;
         }
-        /* .main img {
-            width: 30%;
-        } */
-        .main {
-            grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
+        .masonry {
+            -webkit-columns: 2 135px;
+            -moz-columns: 2 135px;
+            columns: 2 135px;
+            column-gap: .5rem;
+            grid-area: content;
+            align-self: start;
+            justify-self: left;
+            padding-left: .7rem; 
+        }
+        .masonry-layout-panel {
+            break-inside: avoid;
+            /* display: inline-block; */
+            margin-bottom: .2rem;
         }
         h1 {
             font-size: 3rem;
@@ -295,6 +299,16 @@ and (orientation: landscape) {
         #map {
             width: auto;
             height: 61vh;
+        }
+        .masonry {
+            -webkit-columns: 3 120px;
+            -moz-columns: 3 120px;
+            columns: 3 120px;
+            column-gap: .5rem;
+            grid-area: content;
+            align-self: start;
+            justify-self: left;
+            padding-left: .7rem; 
         }
     
 } 
@@ -390,6 +404,21 @@ and (orientation: landscape) {
         line-height: 1.1rem;
         padding-right: 1.25rem;
         margin: -4px 0 .5rem 0;
+    }
+    .masonry {
+        -webkit-columns: 3 120px;
+        -moz-columns: 3 120px;
+        columns: 3 120px;
+        column-gap: .5rem;
+        grid-area: content;
+        align-self: start;
+        justify-self: left;
+        padding-left: .7rem; 
+    }
+    .masonry-layout-panel {
+        break-inside: avoid;
+        display: inline-block;
+        margin-bottom: .4rem;
     }
     h1 {
         font-size: 4.5rem;
@@ -592,6 +621,21 @@ and (orientation: landscape) {
             line-height: 1.1rem;
             padding-right: 1.25rem;
             margin: -4px 0 .5rem 0;
+        }
+        .masonry {
+            -webkit-columns: 4 120px;
+            -moz-columns: 4 120px;
+            columns: 4 120px;
+            column-gap: .5rem;
+            grid-area: content;
+            align-self: start;
+            justify-self: left;
+            padding-left: .7rem; 
+        }
+        .masonry-layout-panel {
+            break-inside: avoid;
+            display: inline-block;
+            margin-bottom: .6rem;
         }
         h1 {
             font-weight: 200;
