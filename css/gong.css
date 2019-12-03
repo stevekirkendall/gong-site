@@ -172,6 +172,13 @@ li a.here, li a:hover.here, li a:visited.here,
 .here {
     color: #666565;
 }
+p.strongPara {
+    font-weight: bold;
+    font-style: italic;
+}
+p.strongPara + p{
+    margin: 1rem 0 0 0;
+}
 
 
 /* ----------- iphone5 568x320 landscape ----------- */
