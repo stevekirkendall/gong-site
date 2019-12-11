@@ -138,7 +138,7 @@ li a.here, li a:hover.here, li a:visited.here,
   .dropdown-container {
       max-width: 100px;
       min-width: 50px;
-      overflow: hidden;
+      /* overflow: hidden; */
   }
   header.clearfix p {
     line-height: 1.2rem;
@@ -154,6 +154,7 @@ li a.here, li a:hover.here, li a:visited.here,
       transform: rotate(0);
       transition: transform 350ms ease-in-out;
   }
+  
   .open .expand{
       transform: rotate(45deg);
   }
@@ -169,6 +170,11 @@ li a.here, li a:hover.here, li a:visited.here,
     /* font-size: .88rem; */
     line-height: 1.25rem;
 }
+/* .dropdown-container article .articleOpen {
+    background: blue;
+    max-height: 110px;
+    height: 110px;
+  } */
 .here {
     color: #666565;
 }
