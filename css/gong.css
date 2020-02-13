@@ -115,25 +115,13 @@ ul {
     padding: 0;
     margin: 0;
 }
-a, a:hover, a:visited {
+a, a:visited {
     color: #b1b1b1;
     text-decoration: none;
     font-size: .8rem;
     line-height: 1rem;
 }
-li a.here, li a:hover.here, li a:visited.here {
-    color: #666565;
-}
-/* .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-  } */
-  
-.here {
+a:hover, a.here, a:hover.here, a:visited.here {
     color: #666565;
 }
 p.strongPara {
@@ -199,7 +187,6 @@ p.strongPara {
             grid-area: content;
             align-self: start;
             justify-self: left;
-            /* padding-left: .7rem;  */
             height: 90vh;
         }
         .picture img {
@@ -219,8 +206,6 @@ p.strongPara {
             height: 60.25vh;
         }
         .contentCopy p {
-            /* font-size: .7rem;
-            line-height: 1rem; */
             margin: -4px 0 1rem 0;
         }
         .masonry {
@@ -230,11 +215,9 @@ p.strongPara {
             grid-area: content;
             align-self: start;
             justify-self: left;
-            /* padding-left: .7rem;  */
         }
         .masonry-layout-panel {
             break-inside: avoid;
-            /* display: inline-block; */
             margin-bottom: .2rem;
         }
         h1 {
@@ -259,10 +242,6 @@ and (orientation: landscape) {
         .masonry {
             columns: 3;
             column-gap: .5rem;
-            /* grid-area: content;
-            align-self: start;
-            justify-self: left;
-            padding-left: .7rem;  */
         }
     
 } 
@@ -355,7 +334,6 @@ and (orientation: landscape) {
         grid-area: content;
         align-self: start;
         justify-self: left;
-        /* padding-left: .7rem;  */
     }
     .masonry-layout-panel {
         break-inside: avoid;
@@ -402,7 +380,6 @@ and (orientation: landscape) {
     .container {
         display: grid;
         grid-template-columns: 11.2rem 1fr;
-        /* grid-template-rows: 9rem 4rem 1fr; */
         grid-template-areas: 
         "gong-name content" 
         "gong-logo content" 
@@ -439,15 +416,6 @@ and (orientation: landscape) {
         width: 30vw;
         height: 40vh;
     }
-    .content #map {
-        width: auto;
-        height: 79vh;
-    }
-    /* .contentCopy p {
-        font-size: .7rem;
-        line-height: 1rem;
-        margin: -4px 0 1rem 0;
-    } */
 }
 
 
@@ -477,8 +445,6 @@ and (orientation: landscape) {
             align-self: start;
             justify-self: left;
             position: fixed; 
-            /* grid-template-columns: 2rem 20rem;
-            grid-template-rows: 2rem minmax(min-content, max-content) minmax(min-content, max-content); */
             grid-template-columns: 2rem max-content 2.5rem 1px;
             grid-template-rows: 2rem max-content 1fr;
             grid-template-areas: 
@@ -512,7 +478,6 @@ and (orientation: landscape) {
             grid-area: content;
             align-self: start;
             justify-self: left;
-            /* padding-left: 2rem;  */
             height: 90vh;
         }
         .main {
@@ -528,7 +493,7 @@ and (orientation: landscape) {
         }
         .content {  
             display: grid;
-            grid-template-columns: max-content  30vw;
+            grid-template-columns: 40% minmax(18rem, 26rem);
             grid-column-gap: 1.65rem;
         }
         .contentCopy p {
@@ -541,7 +506,7 @@ and (orientation: landscape) {
             margin-top: 1.5rem;
         }
         .contentPic {
-            width: 33vw;
+            width: 100%;
             height: auto;
             margin-bottom: .5rem;
         }
@@ -549,19 +514,12 @@ and (orientation: landscape) {
             width: 100%;
             height: auto;
         }
-        /* .contentCopy p {
-            font-size: .8rem;
-            line-height: 1.1rem;
-            padding-right: 1.25rem;
-            margin: -4px 0 .5rem 0;
-        } */
         .masonry {
             columns: 4 12rem;
             column-gap: .5rem;
             grid-area: content;
             align-self: start;
             justify-self: left;
-            /* padding-left: .7rem;  */
         }
         .masonry-layout-panel {
             break-inside: avoid;
@@ -658,9 +616,4 @@ and (orientation: landscape) {
         line-height: 4.75rem;
         letter-spacing: -.08em;
     }
-    .dropdown-container {
-        max-width: 200px;
-        min-width: 75px;
-        overflow: hidden;
-    }    
 }
