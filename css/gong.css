@@ -98,7 +98,8 @@ body {
 .masonry-layout-panel {
     break-inside: avoid;
 }
-.masonry-layout-panel img {
+.masonry-layout-panel img,
+.masonry-layout-panel video {
     width: 100%;
     height: auto;
 }
