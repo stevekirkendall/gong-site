@@ -61,11 +61,13 @@ body {
     justify-self: left;
 }
 .picture,
-.content {
+.content,
+.video {
     grid-area: content;
     align-self: start;
     justify-self: left;
 }
+
 .picture img {
     width: 100%;
     height: auto;
@@ -79,6 +81,12 @@ body {
     width: 100%;
     height: auto;
 }
+video {
+    width: 100%    !important;
+    height: auto   !important;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
 .contentCopy p {
     font-size: .8rem;
     line-height: 1rem;
@@ -129,6 +137,7 @@ p.strongPara {
     font-weight: bold;
     font-style: italic;
 }
+
 
 
 
