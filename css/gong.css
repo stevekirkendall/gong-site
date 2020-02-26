@@ -82,10 +82,10 @@ body {
     height: auto;
 }
 video {
-    /* width: 100%    !important;
-    height: auto   !important; */
+    width: 100%    !important;
+    height: auto   !important;
     margin-bottom: 1rem;
-    /* object-fit: cover; */
+    object-fit: cover;
   }
 .contentCopy p {
     font-size: .8rem;
