@@ -77,167 +77,168 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
     imgf201.onclick = function(e){
         if(width.matches){
-            modal0201.classList.add('open');
+            modal0201.classList.remove('shut');
         } else {
             return;
         }
     }
     imgf202.onclick = function(e){
         if(width.matches){
-            modal0202.classList.add('open');
+            modal0202.classList.remove('shut');
             } else {
             return;
             }    
     }
     imgf203.onclick = function(e){
         if(width.matches){
-            modal0203.classList.add('open');
+            modal0203.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf204.onclick = function(e){
         if(width.matches){
-            modal0204.classList.add('open');
+            modal0204.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf205.onclick = function(e){
         if(width.matches){
-            modal0205.classList.add('open');
+            modal0205.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf206.onclick = function(e){
         if(width.matches){
-            modal0206.classList.add('open');
+            modal0206.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf207.onclick = function(e){
         if(width.matches){
-            modal0207.classList.add('open');
+            modal0207.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf208.onclick = function(e){
         if(width.matches){
-            modal0208.classList.add('open');
+            modal0208.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf209.onclick = function(e){
         if(width.matches){
-            modal0209.classList.add('open');
+            modal0209.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf210.onclick = function(e){
         if(width.matches){
-            modal0210.classList.add('open');
+            modal0210.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf211.onclick = function(e){
         if(width.matches){
-            modal0211.classList.add('open');
+            modal0211.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf212.onclick = function(e){
         if(width.matches){
-            modal0212.classList.add('open');
+            modal0212.classList.remove('shut');;
             } else {
             return;
             }      
     }
     imgf213.onclick = function(e){
         if(width.matches){
-            modal0213.classList.add('open');
+            modal0213.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf214.onclick = function(e){
         if(width.matches){
-            modal0214.classList.add('open');
+            modal0214.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf215.onclick = function(e){
         if(width.matches){
-            modal0215.classList.add('open');
-            } else {
+            modal0215.classList.remove('shut');
+        } else {
             return;
             }      
     }
     imgf216.onclick = function(e){
         if(width.matches){
-            modal0216.classList.add('open');
+            modal0216.classList.remove('shut');
             } else {
             return;
-            }      }
+            }
+    }
     imgf217.onclick = function(e){
         if(width.matches){
-            modal0217.classList.add('open');
+            modal0217.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf218.onclick = function(e){
         if(width.matches){
-            modal0218.classList.add('open');
+            modal0218.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf219.onclick = function(e){
         if(width.matches){
-            modal0219.classList.add('open');
+            modal0219.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf220.onclick = function(e){
         if(width.matches){
-            modal0220.classList.add('open');
+            modal0220.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf221.onclick = function(e){
         if(width.matches){
-            modal0221.classList.add('open');
+            modal0221.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf222.onclick = function(e){
         if(width.matches){
-            modal0222.classList.add('open');
+            modal0222.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf223.onclick = function(e){
         if(width.matches){
-            modal0223.classList.add('open');
+            modal0223.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf224.onclick = function(e){
         if(width.matches){
-            modal0224.classList.add('open');
+            modal0224.classList.remove('shut');
             } else {
             return;
             }      
@@ -245,29 +246,16 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     
 
 
-    // Get the <span> elements that close the modals
-    // var close = document.querySelectorAll('.close');
-    // var closers = Array.from(close);
-    // var displayNone = function(e){
-    //   e.target.parentElement.classList.remove('open');
-    //  } 
-
-
-    // closers.forEach(function(x){
-    //   x.addEventListener('click', displayNone);
-    // });
-
     var close = document.querySelectorAll('.close');
 
     var displayNone = function(e){
-      e.target.parentElement.classList.remove('open');
+      e.target.parentElement.parentElement.classList.add('shut');
     }
 
 
     close.forEach(function(x){
       x.addEventListener('click', displayNone);
     });
-
     
 
  

@@ -65,125 +65,125 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
     imgf301.onclick = function(e){
         if(width.matches){
-            modal0301.classList.add('open');
+            modal0301.classList.remove('shut');
         } else {
             return;
         }
     }
     imgf302.onclick = function(e){
         if(width.matches){
-            modal0302.classList.add('open');
+            modal0302.classList.remove('shut');
             } else {
             return;
             }    
     }
     imgf303.onclick = function(e){
         if(width.matches){
-            modal0303.classList.add('open');
+            modal0303.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf304.onclick = function(e){
         if(width.matches){
-            modal0304.classList.add('open');
+            modal0304.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf305.onclick = function(e){
         if(width.matches){
-            modal0305.classList.add('open');
+            modal0305.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf306.onclick = function(e){
         if(width.matches){
-            modal0306.classList.add('open');
+            modal0306.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf307.onclick = function(e){
         if(width.matches){
-            modal0307.classList.add('open');
+            modal0307.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf308.onclick = function(e){
         if(width.matches){
-            modal0308.classList.add('open');
+            modal0308.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf309.onclick = function(e){
         if(width.matches){
-            modal0309.classList.add('open');
+            modal0309.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf310.onclick = function(e){
         if(width.matches){
-            modal0310.classList.add('open');
+            modal0310.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf311.onclick = function(e){
         if(width.matches){
-            modal0311.classList.add('open');
+            modal0311.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf312.onclick = function(e){
         if(width.matches){
-            modal0312.classList.add('open');
+            modal0312.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf313.onclick = function(e){
         if(width.matches){
-            modal0313.classList.add('open');
+            modal0313.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf314.onclick = function(e){
         if(width.matches){
-            modal0314.classList.add('open');
+            modal0314.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf315.onclick = function(e){
         if(width.matches){
-            modal0315.classList.add('open');
+            modal0315.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf316.onclick = function(e){
         if(width.matches){
-            modal0316.classList.add('open');
+            modal0316.classList.remove('shut');;
             } else {
             return;
             }      }
     imgf317.onclick = function(e){
         if(width.matches){
-            modal0317.classList.add('open');
+            modal0317.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf318.onclick = function(e){
         if(width.matches){
-            modal0318.classList.add('open');
+            modal0318.classList.remove('shut');
             } else {
             return;
             }      
@@ -191,30 +191,16 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     
 
 
-    // Get the <span> elements that close the modals
-    // var close = document.querySelectorAll('.close');
-    // var closers = Array.from(close);
-    // var displayNone = function(e){
-    //   e.target.parentElement.classList.remove('open');
-    //  } 
-
-
-    // closers.forEach(function(x){
-    //   x.addEventListener('click', displayNone);
-    // });
-
     var close = document.querySelectorAll('.close');
 
     var displayNone = function(e){
-      e.target.parentElement.classList.remove('open');
+      e.target.parentElement.parentElement.classList.add('shut');
     }
 
 
     close.forEach(function(x){
       x.addEventListener('click', displayNone);
     });
-
-    
 
  
 

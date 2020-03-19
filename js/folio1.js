@@ -64,125 +64,124 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
     imgf101.onclick = function(e){
         if(width.matches){
-            modal0101.classList.add('open');
+            modal0101.classList.remove('shut');
         } else {
             return;
         }
     }
     imgf102.onclick = function(e){
         if(width.matches){
-            modal0102.classList.add('open');
+            modal0102.classList.remove('shut');
             } else {
             return;
             }    
     }
     imgf103.onclick = function(e){
         if(width.matches){
-            modal0103.classList.add('open');
+            modal0103.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf104.onclick = function(e){
         if(width.matches){
-            modal0104.classList.add('open');
+            modal0104.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf105.onclick = function(e){
         if(width.matches){
-            modal0105.classList.add('open');
-            } else {
+            modal0105.classList.remove('shut');
             return;
             }      
     }
     imgf106.onclick = function(e){
         if(width.matches){
-            modal0106.classList.add('open');
+            modal0106.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf107.onclick = function(e){
         if(width.matches){
-            modal0107.classList.add('open');
+            modal0107.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf108.onclick = function(e){
         if(width.matches){
-            modal0108.classList.add('open');
+            modal0108.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf109.onclick = function(e){
         if(width.matches){
-            modal0109.classList.add('open');
+            modal0109.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf110.onclick = function(e){
         if(width.matches){
-            modal0110.classList.add('open');
+            modal0110.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf111.onclick = function(e){
         if(width.matches){
-            modal0111.classList.add('open');
+            modal0111.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf112.onclick = function(e){
         if(width.matches){
-            modal0112.classList.add('open');
+            modal0112.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf113.onclick = function(e){
         if(width.matches){
-            modal0113.classList.add('open');
+            modal0113.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf114.onclick = function(e){
         if(width.matches){
-            modal0114.classList.add('open');
+            modal0114.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf115.onclick = function(e){
         if(width.matches){
-            modal0115.classList.add('open');
+            modal0115.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf116.onclick = function(e){
         if(width.matches){
-            modal0116.classList.add('open');
+            modal0116.classList.remove('shut');
             } else {
             return;
             }      }
     imgf117.onclick = function(e){
         if(width.matches){
-            modal0117.classList.add('open');
+            modal0117.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf118.onclick = function(e){
         if(width.matches){
-            modal0118.classList.add('open');
+            modal0118.classList.remove('shut');
             } else {
             return;
             }      
@@ -190,22 +189,10 @@ if (window.NodeList && !NodeList.prototype.forEach) {
  
 
 
-    // Get the <span> elements that close the modals
-    // var close = document.querySelectorAll('.close');
-    // var closers = Array.from(close);
-    // var displayNone = function(e){
-    //   e.target.parentElement.classList.remove('open');
-    //  } 
-
-
-    // closers.forEach(function(x){
-    //   x.addEventListener('click', displayNone);
-    // });
-
     var close = document.querySelectorAll('.close');
 
     var displayNone = function(e){
-      e.target.parentElement.classList.remove('open');
+      e.target.parentElement.parentElement.classList.add('shut');
     }
 
 
