@@ -11,12 +11,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	};
 }
 
-// Get window width
-// var width = Math.max(window.screen.width, window.innerWidth);
-
-
-
-      // Get the modals
+// Get the modals
     var modal0101 = document.getElementById("modal01-01");
     var modal0102 = document.getElementById("modal01-02");
     var modal0103 = document.getElementById("modal01-03");
@@ -37,7 +32,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     var modal0118 = document.getElementById("modal01-18");
     
 
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
+// Get the image divs
     var imgf101 = document.getElementById("f1-01");
     var imgf102 = document.getElementById("f1-02");
     var imgf103 = document.getElementById("f1-03");
@@ -57,10 +52,10 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     var imgf117 = document.getElementById("f1-17");
     var imgf118 = document.getElementById("f1-18");
 
-    // var modalImg = document.getElementById("img01");
-    // var captionText = document.getElementById("caption");
-
+// Check for window greater than 1020px
     var width = window.matchMedia('(min-width: 1020px)');
+
+// Add event listeners on image divs
 
     imgf101.onclick = function(e){
         if(width.matches){
@@ -188,6 +183,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     }
  
 
+// 'Close' button functionality
 
     var close = document.querySelectorAll('.close');
 
@@ -195,14 +191,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
       e.target.parentElement.parentElement.classList.add('shut');
     }
 
-
     close.forEach(function(x){
       x.addEventListener('click', displayNone);
     });
-
-    
-
- 
-
-
-
