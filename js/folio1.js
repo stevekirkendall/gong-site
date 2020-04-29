@@ -53,7 +53,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     var imgf118 = document.getElementById("f1-18");
 
 // Check for window greater than 1020px
-    var width = window.matchMedia('(min-width: 1020px)');
+    var width = window.matchMedia('(min-width: 765px)');
 
 // Add event listeners on image divs
 

@@ -11,12 +11,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	};
 }
 
-// Get window width
-// var width = Math.max(window.screen.width, window.innerWidth);
-
-
-
-      // Get the modals
+// Get the modals
     var modal0201 = document.getElementById("modal02-01");
     var modal0202 = document.getElementById("modal02-02");
     var modal0203 = document.getElementById("modal02-03");
@@ -73,7 +68,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     // var modalImg = document.getElementById("img01");
     // var captionText = document.getElementById("caption");
 
-    var width = window.matchMedia('(min-width: 1020px)');
+    var width = window.matchMedia('(min-width: 765px)');
 
     imgf201.onclick = function(e){
         if(width.matches){

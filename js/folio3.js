@@ -61,7 +61,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     // var modalImg = document.getElementById("img01");
     // var captionText = document.getElementById("caption");
 
-    var width = window.matchMedia('(min-width: 1020px)');
+    var width = window.matchMedia('(min-width: 765px)');
 
     imgf301.onclick = function(e){
         if(width.matches){

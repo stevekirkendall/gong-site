@@ -258,7 +258,7 @@ and (orientation: landscape) {
 
 /* ----------- iPad 768x1024 Portrait ----------- */
 
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 765px)
     and (orientation: portrait) {
 
     body {
@@ -363,6 +363,7 @@ and (orientation: landscape) {
     font-size: .8rem;
     line-height: 1rem;
     }
+    
 }
 
 
@@ -375,8 +376,9 @@ and (orientation: landscape) {
     body {
         background: blue;
     }
-
 } */
+
+
 
 
 /* ----------- iPhone X++ Landscape ----------- */
@@ -426,6 +428,7 @@ and (orientation: landscape) {
         width: 30vw;
         height: 40vh;
     }
+    
 }
 
 
@@ -657,6 +660,15 @@ and (orientation: landscape) {
     max-height: 80vh;
  }
 
+ @media only screen and (min-width: 765px)
+    and (orientation: portrait) {
+    .modal-content img {
+        margin: auto;
+        width: 85vw;
+        height: auto;
+    }
+}
+
  .open {
     display: block;
  }
@@ -674,11 +686,23 @@ and (orientation: landscape) {
     font-size: 4rem;
     z-index: 500;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #666565;
     text-decoration: none;
     cursor: pointer;
   }
+
+  @media only screen and (min-width: 800px) 
+    and (orientation: landscape) {
+    .close {
+        position: absolute;
+        top: -.4rem;
+        right: .5rem;
+        color: #666565;
+        font-size: 3rem;
+        z-index: 500;
+        }
+    }
   
