@@ -664,7 +664,7 @@ and (orientation: landscape) {
     and (orientation: portrait) {
     .modal-content img {
         margin: auto;
-        width: 85vw;
+        width: 80vw;
         height: auto;
     }
 }
