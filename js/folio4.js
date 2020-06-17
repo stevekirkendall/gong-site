@@ -60,145 +60,147 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     var imgf419 = document.getElementById("f4-19");
     var imgf420 = document.getElementById("f4-20");
 
-    // var modalImg = document.getElementById("img01");
-    // var captionText = document.getElementById("caption");
 
-    var width = window.matchMedia('(min-width: 765px)');
+// Check for window width greater than 765px &&
+// window height greater than 400px
+var width = window.matchMedia('(min-width: 765px)');
+var height = window.matchMedia('(min-height: 400px)');
+
 
     imgf401.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0401.classList.remove('shut');
         } else {
             return;
         }
     }
     imgf402.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0402.classList.remove('shut');
             } else {
             return;
             }    
     }
     imgf403.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0403.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf404.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0404.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf405.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0405.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf406.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0406.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf407.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0407.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf408.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0408.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf409.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0409.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf410.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0410.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf411.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0411.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf412.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0412.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf413.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0413.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf414.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0414.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf415.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0415.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf416.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0416.classList.remove('shut');
             } else {
             return;
             }      }
     imgf417.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0417.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf418.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0418.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf419.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0419.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf420.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0420.classList.remove('shut');
             } else {
             return;

@@ -58,131 +58,132 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     var imgf318 = document.getElementById("f3-18");
     
 
-    // var modalImg = document.getElementById("img01");
-    // var captionText = document.getElementById("caption");
+// Check for window width greater than 765px &&
+// window height greater than 400px
+var width = window.matchMedia('(min-width: 765px)');
+var height = window.matchMedia('(min-height: 400px)');
 
-    var width = window.matchMedia('(min-width: 765px)');
 
     imgf301.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0301.classList.remove('shut');
         } else {
             return;
         }
     }
     imgf302.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0302.classList.remove('shut');
             } else {
             return;
             }    
     }
     imgf303.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0303.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf304.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0304.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf305.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0305.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf306.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0306.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf307.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0307.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf308.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0308.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf309.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0309.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf310.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0310.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf311.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0311.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf312.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0312.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf313.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0313.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf314.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0314.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf315.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0315.classList.remove('shut');
             } else {
             return;
             }      
     }
     imgf316.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0316.classList.remove('shut');;
             } else {
             return;
             }      }
     imgf317.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0317.classList.remove('shut');
             } else {
             return;
             }     
     }
     imgf318.onclick = function(e){
-        if(width.matches){
+        if(width.matches && height.matches){
             modal0318.classList.remove('shut');
             } else {
             return;
