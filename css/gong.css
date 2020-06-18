@@ -649,8 +649,10 @@ and (orientation: landscape) {
   } */ 
 
     .modal {
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         position: fixed;
         z-index: 1;
         left: 0;
@@ -662,31 +664,114 @@ and (orientation: landscape) {
     }
 
     .carousel {
-        display: grid;
-        grid-template-columns: 3em 70vw 3em;
-        grid-template-rows: 80vh;
-        justify-content: center;
-        align-items: center;
-        grid-gap: 1em;
-        /* border: 1px solid red; */
+      display: grid;
+      grid-template-columns: 3em 80vw 3em;
+      height: 80%;
+      border: 1px solid blue;
     }
   
-  .modal-content {
-    width: auto;
-    max-height: 90vh;
-    position:relative;
-    text-align: center;
+  .carousel__contents-container {
+    overflow: hidden;
+    border: 4px solid black;
  }
 
-  .modal-content img {
-    margin: 0 auto;
-    width: auto;
-    max-height: 80vh;
+  .carousel__contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 3px solid blue;
  }
+
+ .carousel__slide {
+     position: absolute;
+     width: 100%;
+     height: auto;
+     border: 2px solid gold;
+ }
+
+  .carousel__slide img {
+    width: auto;
+    height: 100%;
+    border: 6px solid greenyellow;
+    
+ }
+
+  
+ 
+ .carousel__slide:nth-child(2) {
+     left: 800px;
+ } 
+ 
+  .carousel__slide:nth-child(3) {
+     left: 1600px;
+ }
+
+ .carousel__slide:nth-child(4) {
+     left: 2400px;
+ }
+
+ .carousel__slide:nth-child(5) {
+     left: 3200px;
+ }
+
+ .carousel__slide:nth-child(6) {
+     left: 4000px;
+ }
+
+ .carousel__slide:nth-child(7) {
+     left: 4800px;
+ }
+
+ .carousel__slide:nth-child(8) {
+     left: 5600px;
+ }
+
+ .carousel__slide:nth-child(9) {
+     left: 6400px;
+ }
+
+ .carousel__slide:nth-child(10) {
+     left: 7200px;
+ }
+
+ .carousel__slide:nth-child(11) {
+     left: 8000px;
+ }
+
+ .carousel__slide:nth-child(12) {
+     left: 8800px;
+ }
+
+ .carousel__slide:nth-child(13) {
+     left: 800px;
+ }
+
+ .carousel__slide:nth-child(14) {
+     left: 9600px;
+ }
+
+ .carousel__slide:nth-child(15) {
+     left: 10400px;
+ }
+
+ .carousel__slide:nth-child(16) {
+     left: 11200px;
+ }
+
+ .carousel__slide:nth-child(17) {
+     left: 12000px;
+ }
+
+ .carousel__slide:nth-child(18) {
+     left: 12800px;
+ } */
+
+ */
+
 
  @media only screen and (min-width: 765px)
     and (orientation: portrait) {
-    .modal-content img {
+    .carousel__contents img {
         margin: auto;
         width: 80vw;
         height: auto;
