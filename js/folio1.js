@@ -70,6 +70,7 @@ thumbs.forEach(thumb => {
         } else {
         return;
         }
+        console.log(thumb.dataset.target);
     });
 });
 
