@@ -1,44 +1,3 @@
-// CAROUSEL FUNCTIONALITY
-var prev = document.querySelector('.prev');
-var next = document.querySelector('.next');
-var slides = document.querySelectorAll('.carousel__slide');
-var counter = 0;
-var amount = slides.length;
-var current = slides[0];
-// const tabContent = tabby.querySelector('#' + target);
-
-var navigate = function(direction){
-    current.classList.remove('active');
-    current.classList.remove('current');
-    counter = counter + direction;
-    if(direction === -1 && counter < 0){
-        counter = amount - 1;
-    }
-    if(direction === 1 && !slides[counter]){
-        counter = 0;
-    }
-    current = slides[counter];
-    current.classList.add('active');
-    current.classList.add('current');
-};
-
-next.addEventListener('click', function(e){
-    navigate(1);
-    console.log('CLICKED NEXT!!');
-});
-
-prev.addEventListener('click', function(e){
-    navigate(-1);
-    console.log('CLICKED PREV!!');
-});
-
-navigate(0);
-
-
-
-
-
-
 /**
  * NodeList.prototype.forEach() polyfill
  * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Polyfill
@@ -67,10 +26,19 @@ thumbs.forEach(thumb => {
     thumb.addEventListener('click', (e) => {
         if(width.matches && height.matches){
             modal.classList.remove('shut');
+            var target = thumb.dataset.target;
+            var carouselContents = document.querySelector('.carousel__contents');
+            var carouselItems = carouselContents.getElementsByTagName('li');
+            for (var i = 0; i < carouselItems.length; i++){
+                carouselItems[i].classList.remove('active');
+            }
+            var largeImg = carouselContents.querySelector('#' + target);
+            largeImg.classList.add('active');
+
         } else {
         return;
         }
-        console.log(thumb.dataset.target);
+        // console.log(largeImg)
     });
 });
 
@@ -90,3 +58,31 @@ if(!e.target.closest('.carousel')){
     modal.classList.add('shut');
 }
 });
+
+// CAROUSEL FUNCTIONALITY
+var prev = document.querySelector('.prev');
+var next = document.querySelector('.next');
+var slides = Array.from(document.querySelectorAll('.carousel__slide'));
+var carouselContents = document.querySelector('.carousel__contents');
+var currentSlide = carouselContents.querySelector('.active');
+
+
+
+
+next.addEventListener('click', function(e){
+    // slides.forEach(s=>{
+    //     s.classList.remove('active');
+    //     });
+        console.log('CLICKED NEXT!!');
+        var currentSlide = carouselContents.querySelector('.active');
+        var nextSlide ;
+        console.log(currentSlide);
+
+});
+
+prev.addEventListener('click', function(e){
+    navigate(-1);
+    console.log('CLICKED PREV!!');
+
+});
+
