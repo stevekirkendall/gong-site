@@ -58,14 +58,15 @@ thumbs.forEach(thumb => {
 });
 
 // 'Close' button closes modal
-var close = document.querySelectorAll('.close');
-var displayNone = function(e){
-    e.target.parentElement.parentElement.classList.add('shut');
-}
+// var close = document.querySelectorAll('.close');
 
-close.forEach(function(x){
-    x.addEventListener('click', displayNone);
-});
+// var displayNone = function(e){
+//     e.target.parentElement.classList.add('shut');
+// }
+
+// close.forEach(function(x){
+//     x.addEventListener('click', displayNone);
+// });
 
 // modal closes modal
 modal.addEventListener('click', e => {
