@@ -656,8 +656,8 @@ and (orientation: landscape) {
 
     .carousel {
       display: grid;
-      grid-template-columns: 4em 80vw 4em;
-      height: auto;
+      grid-template-columns: 3em 80vw 3em;
+      height: 80vh;
       background-color: #fff;
     }
   
@@ -671,9 +671,8 @@ and (orientation: landscape) {
  }
 
   .carousel__contents {
-    height: auto;
-    width: 100%;
-    /* border: 6px solid lightpink; */
+      height: 100%;
+      width: auto;
  }
 
  .carousel__slide {
@@ -692,32 +691,69 @@ and (orientation: landscape) {
  .carousel__contents .carousel__slide.active {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     visibility: visible;
  }
 
-  .carousel__slide.active img {
-    width: 70%;
+  /* .carousel__slide.active img {
+    width: 60%;
     height: auto;
-    /* border: 6px solid greenyellow; */
- }
+    border: 1px solid red;
+ } */
 
  .next,
  .prev {
      max-width: 6em;
  }
+ /* (min-width: 765px) */
 
-
- 
- @media only screen and (min-width: 765px)
+ @media only screen
     and (orientation: portrait) {
-    .carousel__contents img {
+    /* .carousel__contents img {
         margin: auto;
         width: 80vw;
         height: auto;
-    }
+    } */
+    .carousel__slide.active img {
+        width: 80%;
+        height: auto;
+        /* border: 1px solid red; */
+     }
+}
+
+/* and (min-width: 1024px) */
+
+ @media only screen 
+    and (orientation: landscape) {
+    /* .carousel__contents img {
+        margin: auto;
+        width: 80vw;
+        height: auto;
+    } */
+    .carousel__slide.active img {
+        /* width: 54%;
+        height: auto; */
+        width: auto;
+        height: 100%;
+        /* border: 2px solid blue; */
+     }
+}
+
+ @media only screen and (min-width: 1370px)
+    and (orientation: landscape) {
+    /* .carousel__contents img {
+        margin: auto;
+        width: 80vw;
+        height: auto;
+    } */
+    .carousel__slide.active img {
+        width: auto;
+        height: 100%;
+        /* border: 2px solid deeppink; */
+     }
 }
 
  .open {
