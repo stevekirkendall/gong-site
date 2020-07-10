@@ -664,8 +664,6 @@ and (orientation: landscape) {
   .carousel__contents-container {
     overflow: hidden;
     position: relative;
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
  }
@@ -698,63 +696,51 @@ and (orientation: landscape) {
     visibility: visible;
  }
 
-  /* .carousel__slide.active img {
-    width: 60%;
-    height: auto;
-    border: 1px solid red;
- } */
-
  .next,
  .prev {
      max-width: 6em;
  }
- /* (min-width: 765px) */
 
- @media only screen
+ @media only screen and (min-width: 765px)
     and (orientation: portrait) {
-    /* .carousel__contents img {
-        margin: auto;
-        width: 80vw;
-        height: auto;
-    } */
-    .carousel__slide.active img {
+      .carousel__slide.active img {
         width: 80%;
-        height: auto;
+        height: 700px;
+        object-fit: contain;
         /* border: 1px solid red; */
      }
 }
 
-/* and (min-width: 1024px) */
 
- @media only screen 
+  @media only screen and (min-width: 1024px)
     and (orientation: landscape) {
-    /* .carousel__contents img {
-        margin: auto;
-        width: 80vw;
-        height: auto;
-    } */
     .carousel__slide.active img {
-        /* width: 54%;
-        height: auto; */
-        width: auto;
-        height: 100%;
+        object-fit: contain;
+        width: 80%;
+        height: 600px;
+        /* border: 2px solid blue; */
+     }
+}
+
+  @media only screen and (min-width: 1065px)
+    and (orientation: landscape) {
+    .carousel__slide.active img {
+        object-fit: contain;
+        width: 80%;
+        height: 780px;
         /* border: 2px solid blue; */
      }
 }
 
  @media only screen and (min-width: 1370px)
     and (orientation: landscape) {
-    /* .carousel__contents img {
-        margin: auto;
-        width: 80vw;
-        height: auto;
-    } */
     .carousel__slide.active img {
-        width: auto;
+        width: 100%;
         height: 100%;
-        /* border: 2px solid deeppink; */
+        object-fit: contain;
+        /* border: 2px solid deeppink;  */
      }
-}
+} 
 
  .open {
     display: block;
@@ -780,16 +766,3 @@ and (orientation: landscape) {
     text-decoration: none;
     cursor: pointer;
   }
-
-  /* @media only screen and (min-width: 800px) 
-    and (orientation: landscape) {
-    .close {
-        position: absolute;
-        top: -.4rem;
-        right: .5rem;
-        color: #666565;
-        font-size: 3rem;
-        z-index: 500;
-        }
-    } */
-  
