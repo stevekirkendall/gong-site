@@ -15,7 +15,9 @@ button {
 
 body {
     background: #fff;
-    color: #b1b1b1;
+    
+    /* color: #b1b1b1; ORIGNAL BODY COLOR */
+    color: #757474;
     font-family: century-gothic, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -130,13 +132,15 @@ ul {
     margin: 0;
 }
 a, a:visited {
-    color: #b1b1b1;
+    /* color: #b1b1b1; ORIGINAL VISITED COLOR */
+    color: #757474;
     text-decoration: none;
     font-size: .8rem;
     line-height: 1rem;
 }
 a:hover, a.here, a:hover.here, a:visited.here {
-    color: #666565;
+    /* color: #666565; ORIGINAL HOVER COLOR */
+    color: #b5070d;
 }
 p.strongPara {
     font-weight: bold;
