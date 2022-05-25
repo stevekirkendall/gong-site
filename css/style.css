@@ -79,6 +79,11 @@ body {
     width: 100%;
     height: auto;
 }
+
+.picture__ls {
+    display: none;
+}
+
 .contentPic {
     width: 48vw;
     height: auto;
@@ -202,15 +207,23 @@ p.strongPara {
             background-color: #b1b1b1;
         }
         .picture,
-        .content {
+        .content,
+        .picture__ls {
             grid-area: content;
             align-self: start;
             justify-self: left;
             height: 90vh;
         }
-        .picture img {
+        .picture {
+            display: none;
+        }
+        .picture__ls {
+            display: block;
+            justify-self: center;
+        }
+        .picture__ls img {
             width: auto;
-            height: 100%;
+            height: 90vh;
         }
         .content {  
             display: grid;
@@ -419,10 +432,13 @@ and (orientation: landscape) {
         width: 2rem;
     }
     .picture {
-        margin-left: .5em;
-        padding-left: 2rem;
+        display: none;
     }
-    .picture img {
+    .picture__ls {
+        display: block;
+        justify-self: center;
+    }
+    .picture__ls img {
         width: auto;
         height: 90vh;
     }
@@ -505,13 +521,16 @@ and (orientation: landscape) {
         .main {
             width: 95%;
         }
-        .picture {
+        .picture__ls {
             margin: 0;
-            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            place-self: center;
         }
-        .picture img {
+        .picture__ls img {
             width: auto;
-            height: 90vh;
+            height: 50vw;
         }
         .content {  
             display: grid;
