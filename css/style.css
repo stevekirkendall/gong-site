@@ -137,14 +137,12 @@ ul {
     margin: 0;
 }
 a, a:visited {
-    /* color: #b1b1b1; ORIGINAL VISITED COLOR */
     color: #757474;
     text-decoration: none;
     font-size: .8rem;
     line-height: 1rem;
 }
 a:hover, a.here, a:hover.here, a:visited.here {
-    /* color: #666565; ORIGINAL HOVER COLOR */
     color: #b5070d;
 }
 p.strongPara {
